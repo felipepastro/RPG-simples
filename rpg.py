@@ -10,140 +10,92 @@ classe = ""
 Dificuldade = ""
 
 def habilidade_guerreiro_jogador():
-    global vidainimigo, inimigovaierrar, botdesviou
-    if botdesviou == False:
-        inimigovaierrar = True
-        vidainimigo -= forhabjogador
-    else:
-        botdesviou = True
+    global vidainimigo, inimigovaierrar
+    inimigovaierrar = True
+    vidainimigo -= forhabjogador
 def habilidade_arqueiro():
-    global vidainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        if random.random() < 0.25:
-            vidainimigo *= 0.3
-    else:
-        botdesviou = False
+    global vidainimigo
+    vidainimigo -= forhabjogador
+    if random.random() < 0.25:
+        vidainimigo *= 0.3
 def habilidade_mago():
-    global vidainimigo, inimigovaierrar, botdesviou
-    if botdesviou == False:
-        inimigovaierrar = True
-        vidainimigo -= forhabjogador
-    else:
-        botdesviou = False
+    global vidainimigo, inimigovaierrar
+    inimigovaierrar = True
+    vidainimigo -= forhabjogador
 def habilidade_zoio_jogador():
-    global vidainimigo, forcainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        forcainimigo *= 0.1
-    else:
-        botdesviou = False
+    global vidainimigo, forcainimigo
+    vidainimigo -= forhabjogador
+    forcainimigo *= 0.1
 def habilidade_alek_jogador():
-    global vidainimigo, forcainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        if personagembot == "Proerd":
-            forcainimigo *= 0.75
-        else:
-            forcainimigo *= 0.5
+    global vidainimigo, forcainimigo
+    vidainimigo -= forhabjogador
+    if personagembot == "Proerd":
+        forcainimigo *= 0.75
     else:
-        botdesviou = False
+        forcainimigo *= 0.5
 def habilidade_proerd_jogador():
-    global vidainimigo, inimigovaierrar, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        if personagembot == "Capitão Pátria" or personagembot == "Alek":
-            vidainimigo -= 10
-        if random.random() < 0.7:
-            inimigovaierrar = True
-    else:
-        botdesviou = False
+    global vidainimigo, inimigovaierrar
+    vidainimigo -= forhabjogador
+    if personagembot == "Capitão Pátria" or personagembot == "Alek":
+        vidainimigo -= 10
+    if random.random() < 0.7:
+        inimigovaierrar = True
 def habilidade_hatsunemiku():
-    global vidainimigo, inimigovaierrar, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        if random.random() < 0.9:
-            inimigovaierrar = True
-    else:
-        botdesviou = False
+    global vidainimigo, inimigovaierrar
+    vidainimigo -= forhabjogador
+    if random.random() < 0.9:
+        inimigovaierrar = True
 def habilidade_capitaopatria_jogador():
-    global vidainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        contador = 1
-        while contador <= 5:
-            vidainimigo -= 5
-            contador += 1
-            time.sleep(1)
-    else:
-        botdesviou = False
+    global vidainimigo
+    vidainimigo -= forhabjogador
+    contador = 1
+    while contador <= 5:
+        vidainimigo -= 5
+        contador += 1
+        time.sleep(1)
 def habilidade_manuelgomes():
-    global forcainimigo, forhabinimigo, vidainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        forhabinimigo -= 5
-        forcainimigo -= 5
-    else:
-        botdesviou = False
+    global forcainimigo, forhabinimigo, vidainimigo
+    vidainimigo -= forhabjogador
+    forhabinimigo -= 5
+    forcainimigo -= 5
 def habilidade_dilma_jogador():
-    global jogadordesviou, vidainimigo, botdesviou
-    if botdesviou == False:
-        vidainimigo -= forhabjogador
-        jogadordesviou = True
-    else:
-        botdesviou = False
+    global jogadordesviou, vidainimigo
+    vidainimigo -= forhabjogador
+    jogadordesviou = True
 def habilidade_alek_bot():
-    global jogadordesviou, vidajogador, forcajogador
-    if jogadordesviou == False:
-        vidajogador -= forhabinimigo
-        if classe == "Proerd":
-            forcajogador *= 0.75
-        else:
-            forcajogador *= 0.5
+    global vidajogador, forcajogador
+    vidajogador -= forhabinimigo
+    if classe == "Proerd":
+        forcajogador *= 0.75
     else:
-        jogadordesviou = False
+        forcajogador *= 0.5
 def habilidade_dilma_bot():
-    global botdesviou, vidajogador, jogadordesviou
-    if jogadordesviou == False:
-        vidajogador -= forcainimigo
-        botdesviou = True
-    else:
-        jogadordesviou = False
+    global botdesviou, vidajogador
+    vidajogador -= forcainimigo
+    botdesviou = True
 def habilidade_guerreiro_bot():
-    global vidajogador, jogadorvaierrar, jogadordesviou
-    if jogadordesviou == False:
-        jogadorvaierrar = True
-        vidajogador -= forhabinimigo
-    else:
-        jogadordesviou = False
+    global vidajogador, jogadorvaierrar
+    jogadorvaierrar = True
+    vidajogador -= forhabinimigo
 def habilidade_proerd_bot():
-    global vidajogador, jogadorvaierrar, jogadordesviou
-    if jogadordesviou == False:
-        vidajogador -= forhabinimigo
-        if classe == "Capitão Pátria" or classe == "Alek":
-            vidajogador -= 10
-        if random.random() < 0.7:
-            jogadorvaierrar = True
-    else:
-        jogadordesviou = False
+    global vidajogador, jogadorvaierrar
+    vidajogador -= forhabinimigo
+    if classe == "Capitão Pátria" or classe == "Alek":
+        vidajogador -= 10
+    if random.random() < 0.7:
+        jogadorvaierrar = True
 def habilidade_zoio_bot():
-    global vidajogador, forcajogador, jogadordesviou
-    if jogadordesviou == False:
-        vidajogador -= forhabinimigo
-        forcajogador *= 0.1
-    else:
-        jogadordesviou = False
+    global vidajogador, forcajogador
+    vidajogador -= forhabinimigo
+    forcajogador *= 0.1
 def habilidade_capitaopatria_bot():
-    global vidajogador, jogadordesviou
-    if jogadordesviou == False:
-        vidajogador -= forhabinimigo
-        contador = 1
-        while contador <= 5:
-            vidajogador -= 5
-            contador += 1
-            time.sleep(1)
-    else:
-        jogadordesviou = False
+    global vidajogador
+    vidajogador -= forhabinimigo
+    contador = 1
+    while contador <= 5:
+        vidajogador -= 5
+        contador += 1
+        time.sleep(1)
 
 habilidade_bot = {"Alek": habilidade_alek_bot,
                   "Dilma": habilidade_dilma_bot,
