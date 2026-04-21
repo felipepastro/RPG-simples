@@ -14,8 +14,9 @@ na primeira jogada o bot inimigo joga a habilidade e a luta vai até alguém fic
 e exibe se o jogador ganhou ou perdeu a partida
 
 Como executar?
-1. baixe o rpg.py e as pastas imagens e sons
-2. tenha certeza que tem o python baixado (senão, baixe em python.org)
-3. vá no terminal e coloque o caminho para a pasta que está o rpg.py (cd >>seu caminho<<)
-4. depois execute pelo terminal (py rpg.py) ou (python rpg.py)
-5. se der algum erro inesperado e não for do pyhton não baixado/instalado, reporte o erro no repositório.
+1. Baixe o rpg.py e as pastas imagens e sons
+2. Tenha certeza que tem o python baixado (senão, baixe em python.org)
+3. Abra o terminal e escreva (pip install pillow) e (pip install pygame), se der erro escreva (py -m pip install pillow) e (py -m pip install pygame)
+4. Coloque o caminho para a pasta que está o rpg.py (cd >>seu caminho<<)
+5. Depois execute pelo terminal (py rpg.py) ou (python rpg.py)
+6. Se mesmo assim não conseguir executar, reporte no repositório.
