@@ -467,10 +467,40 @@ Efeito Habilidade: {classes[personagembot]["Efeito da Habilidade"]}
                     if not vezjogador:
                         if bot_usou_especial == True:
                             ataquenormalbot()
-                            vezjogador = True
+                            if vidajogador > 0 and vidainimigo > 0:
+                                vezjogador = True
+                            elif vidainimigo < 0:
+                                jogadordesviou = False
+                                botaoataquehabilidade.destroy()
+                                botaoataquenormal.destroy()
+                                info = tk.Label(frameacoesjogador, text="Você venceu!", font=("Comic Sans MS", 20, "normal"), fg="green", bg="black")
+                                info.pack()
+                                jogo.after(2000, janelaprincipal.destroy)
+                            else:
+                                jogadordesviou = False
+                                botaoataquehabilidade.destroy()
+                                botaoataquenormal.destroy()
+                                info = tk.Label(frameacoesjogador, text="Você Perdeu!", font=("Comic Sans MS", 20, "normal"), fg="red", bg="black")
+                                info.pack()
+                                jogo.after(2000, janelaprincipal.destroy)
                         else:
                             ataqueespecialbot()
-                            vezjogador = True
+                            if vidajogador > 0 and vidainimigo > 0:
+                                vezjogador = True
+                            elif vidainimigo < 0:
+                                jogadordesviou = False
+                                botaoataquehabilidade.destroy()
+                                botaoataquenormal.destroy()
+                                info = tk.Label(frameacoesjogador, text="Você venceu!", font=("Comic Sans MS", 20, "normal"), fg="green", bg="black")
+                                info.pack()
+                                jogo.after(2000, janelaprincipal.destroy)
+                            else:
+                                jogadordesviou = False
+                                botaoataquehabilidade.destroy()
+                                botaoataquenormal.destroy()
+                                info = tk.Label(frameacoesjogador, text="Você Perdeu!", font=("Comic Sans MS", 20, "normal"), fg="red", bg="black")
+                                info.pack()
+                                jogo.after(2000, janelaprincipal.destroy)
                 elif vidainimigo < 0:
                     jogadordesviou = False
                     botaoataquehabilidade.destroy()
