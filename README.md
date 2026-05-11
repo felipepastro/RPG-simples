@@ -16,7 +16,7 @@ e exibe se o jogador ganhou ou perdeu a partida
 Como executar?
 1. Baixe o rpg.py e as pastas imagens e sons
 2. Tenha certeza que tem o python baixado (senão, baixe em python.org)
-3. Abra o terminal e escreva (pip install pillow) e (pip install pygame), se der erro escreva (py -m pip install pillow) e (py -m pip install pygame)
+3. Abra o terminal e escreva (pip install pillow) e (pip install pygame-ce), se der erro escreva (py -m pip install pillow) e (py -m pip install pygame-ce)
 4. Coloque o caminho para a pasta que está o rpg.py (cd >>seu caminho<<)
 5. Depois execute pelo terminal (py rpg.py) ou (python rpg.py)
 6. Se mesmo assim não conseguir executar, reporte no repositório.
