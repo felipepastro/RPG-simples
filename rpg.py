@@ -50,9 +50,9 @@ def habilidade_capitaopatria_jogador():
     vidainimigo -= forhabjogador
     contador = 1
     while contador <= 5:
+        time.sleep(1)
         vidainimigo -= 5
         contador += 1
-        time.sleep(1)
 def habilidade_manuelgomes():
     global forcainimigo, forhabinimigo, vidainimigo
     vidainimigo -= forhabjogador
@@ -93,9 +93,9 @@ def habilidade_capitaopatria_bot():
     vidajogador -= forhabinimigo
     contador = 1
     while contador <= 5:
+        time.sleep(1)
         vidajogador -= 5
         contador += 1
-        time.sleep(1)
 
 habilidade_bot = {"Alek": habilidade_alek_bot,
                   "Dilma": habilidade_dilma_bot,
